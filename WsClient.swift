@@ -15,7 +15,7 @@ class WsClient: NSObject, NSXMLParserDelegate{
     var mutableData:NSMutableData  = NSMutableData()
     var currentElementName:NSString = ""
     
-    func actionConvert() {
+    func request() {
         
         let soapMessage = "<?xml version='1.0' encoding='utf-8'?><soapenv:Envelope xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' xmlns:soapenv='http://schemas.xmlsoap.org/soap/envelope/' xmlns:ws='http://ws.eventos.com.br/'><soapenv:Header/><soapenv:Body><ws:findParticipanteByNrCPF soapenv:encodingStyle='http://schemas.xmlsoap.org/soap/encoding/'><String_1 xsi:type='xsd:string'>07103203458</String_1></ws:findParticipanteByNrCPF></soapenv:Body></soapenv:Envelope>"
         
